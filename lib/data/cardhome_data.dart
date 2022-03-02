@@ -8,12 +8,12 @@ final List<CardHome> listWidget = [
           'Um widget que insere seu filho com preenchimento suficiente para evitar invasões do sistema operacional.',
       route: '/safaarea',
       icon: Icons.new_releases),
-  // CardHome(
-  //     title: 'Expanded',
-  //     description:
-  //         'Um widget que expande um filho de uma Linha, Coluna ou Flex para que o filho preencha o espaço disponível.',
-  //     route: '/expanded',
-  //     icon: Icons.new_releases),
+  CardHome(
+      title: 'Expanded',
+      description:
+          'Um widget que expande um filho de uma Linha, Coluna ou Flex para que o filho preencha o espaço disponível.',
+      route: '/expanded',
+      icon: Icons.new_releases),
   // CardHome(
   //   title: 'Wrap',
   //   description: 'Um widget com quebras automaticas dos seus filhos',

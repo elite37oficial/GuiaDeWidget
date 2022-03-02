@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:guiadewidget/views/expanded_page.dart';
 // import 'package:guiadewidget/views/expanded_page.dart';
 import 'package:guiadewidget/views/home_page.dart';
 import 'package:guiadewidget/views/safearea_page.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         routes: {
           '/': (context) => HomePage(),
           '/safaarea': (context) => const SafeareaPage(),
-          // '/expanded': (context) => const ExpandedPage(),
+          '/expanded': (context) => const ExpandedPage(),
           // '/wrap': (context)=> const WrapPage(),
         });
   }

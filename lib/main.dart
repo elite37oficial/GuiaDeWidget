@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:guiadewidget/views/expanded_page.dart';
-// import 'package:guiadewidget/views/expanded_page.dart';
 import 'package:guiadewidget/views/home_page.dart';
 import 'package:guiadewidget/views/safearea_page.dart';
-// import 'package:guiadewidget/views/safearea_page.dart';
-// import 'package:guiadewidget/views/wrap_page.dart';
+import 'package:guiadewidget/views/wrap_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +22,7 @@ class MyApp extends StatelessWidget {
           '/': (context) => HomePage(),
           '/safaarea': (context) => const SafeareaPage(),
           '/expanded': (context) => const ExpandedPage(),
-          // '/wrap': (context)=> const WrapPage(),
+          '/wrap': (context) => const WrapPage(),
         });
   }
 }

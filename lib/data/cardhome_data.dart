@@ -20,4 +20,11 @@ final List<CardHome> listWidget = [
     route: '/wrap',
     icon: Icons.new_releases,
   ),
+  CardHome(
+    title: 'AnimatedContainer',
+    description:
+        'Versão animada do Container que muda gradualmente seus valores ao longo de um período de tempo.',
+    route: '/AnimatedContainer',
+    icon: Icons.new_releases,
+  ),
 ];

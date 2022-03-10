@@ -27,4 +27,11 @@ final List<CardHome> listWidget = [
     route: '/AnimatedContainer',
     icon: Icons.new_releases,
   ),
+  CardHome(
+    title: 'Opacity',
+    description:
+        'Um widget que torna seu filho parcialmente transparente ou oculto.',
+    route: '/Opacity',
+    icon: Icons.new_releases,
+  ),
 ];

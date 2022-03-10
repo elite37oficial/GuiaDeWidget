@@ -15,7 +15,11 @@ class _OpacityPageState extends State<OpacityPage> {
     return Scaffold(
       body: Center(
         child: Column(children: [
-          Container(width: 100, height: 100),
+          Container(width: 100, height: 100, color: Colors.blue),
+          Opacity(
+              opacity: _visible,
+              child: Container(width: 100, height: 100, color: Colors.green)),
+          Container(width: 100, height: 100, color: Colors.yellow),
           Slider(
               value: _visible,
               min: 0,

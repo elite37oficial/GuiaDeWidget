@@ -8,9 +8,9 @@ class ExpandedPage extends StatefulWidget {
 }
 
 class _SafeareaPageState extends State<ExpandedPage> {
+  var bloco3 = 1;
   var bloco1 = 6;
   var bloco2 = 3;
-  var bloco3 = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -20,20 +20,20 @@ class _SafeareaPageState extends State<ExpandedPage> {
       ),
       body: Row(children: [
         Expanded(
-          flex: bloco1,
-          child: Container(
-              width: 50,
-              height: 50,
-              color: Colors.blue,
-              child: Center(child: Text(bloco1.toString()))),
-        ),
-        Expanded(
           flex: bloco2,
           child: Container(
               // width: 50,
               height: 50,
               color: Colors.green,
               child: Center(child: Text(bloco2.toString()))),
+        ),
+        Expanded(
+          flex: bloco1,
+          child: Container(
+              width: 50,
+              height: 50,
+              color: Colors.blue,
+              child: Center(child: Text(bloco1.toString()))),
         ),
         Expanded(
           flex: bloco3,

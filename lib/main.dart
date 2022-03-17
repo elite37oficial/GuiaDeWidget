@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:guiadewidget/views/animated_container_page.dart';
 import 'package:guiadewidget/views/expanded_page.dart';
+import 'package:guiadewidget/views/future_builder_page.dart';
 import 'package:guiadewidget/views/home_page.dart';
 import 'package:guiadewidget/views/opacity_page.dart';
 import 'package:guiadewidget/views/safearea_page.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
           '/wrap': (context) => const WrapPage(),
           '/AnimatedContainer': (context) => const AnimatedContainerPage(),
           '/Opacity': (context) => const OpacityPage(),
+          '/FutureBuilder': (context) => const FutureBuilderPage(),
         });
   }
 }

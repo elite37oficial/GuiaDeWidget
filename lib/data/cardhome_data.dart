@@ -34,4 +34,11 @@ final List<CardHome> listWidget = [
     route: '/Opacity',
     icon: Icons.new_releases,
   ),
+  CardHome(
+    title: 'FutureBuilder',
+    description:
+        'Você tem um Future e precisa de alguns widgets pra exibir seu valor? Experimente FutureBuilder! ',
+    route: '/FutureBuilder',
+    icon: Icons.new_releases,
+  ),
 ];

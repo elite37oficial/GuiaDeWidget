@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:guiadewidget/views/animated_container_page.dart';
 import 'package:guiadewidget/views/expanded_page.dart';
+import 'package:guiadewidget/views/fade_transition_page.dart';
+import 'package:guiadewidget/views/floating_action_button_page.dart';
 import 'package:guiadewidget/views/future_builder_page.dart';
 import 'package:guiadewidget/views/home_page.dart';
 import 'package:guiadewidget/views/opacity_page.dart';
+import 'package:guiadewidget/views/page_view_page.dart';
 import 'package:guiadewidget/views/safearea_page.dart';
+import 'package:guiadewidget/views/table_page.dart';
 import 'package:guiadewidget/views/wrap_page.dart';
 
 void main() {
@@ -29,6 +33,11 @@ class MyApp extends StatelessWidget {
           '/AnimatedContainer': (context) => const AnimatedContainerPage(),
           '/Opacity': (context) => const OpacityPage(),
           '/FutureBuilder': (context) => const FutureBuilderPage(),
+          '/FadeTransition': (context) => const FadeTransitionPage(),
+          '/FloatingActionButton': (context) =>
+              const FloatingActionButtonPage(),
+          '/PageView': (context) => const PageViewPage(),
+          '/Table': (context) => const TablePage(),
         });
   }
 }

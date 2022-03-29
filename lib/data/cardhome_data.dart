@@ -41,4 +41,29 @@ final List<CardHome> listWidget = [
     route: '/FutureBuilder',
     icon: Icons.new_releases,
   ),
+  CardHome(
+    title: 'FadeTransition',
+    description: 'Anima a opacidade de um widget.',
+    route: '/FadeTransition',
+    icon: Icons.new_releases,
+  ),
+  CardHome(
+    title: 'FloatingActionButton',
+    description: 'Botão Flutuante ou em sua barra de navegação inferior.',
+    route: '/FloatingActionButton',
+    icon: Icons.new_releases,
+  ),
+  CardHome(
+    title: 'PageView',
+    description: 'Uma lista rolável que funciona página por página.',
+    route: '/PageView',
+    icon: Icons.new_releases,
+  ),
+  CardHome(
+    title: 'Table',
+    description:
+        'Um widget que usa o algoritmo de layout de tabela para seus filhos.',
+    route: '/Table',
+    icon: Icons.new_releases,
+  ),
 ];

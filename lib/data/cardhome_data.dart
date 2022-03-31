@@ -66,4 +66,10 @@ final List<CardHome> listWidget = [
     route: '/Table',
     icon: Icons.new_releases,
   ),
+  CardHome(
+    title: 'Sliver AppBar',
+    description: 'Um AppBar com animação baseando-se ScrollView',
+    route: '/SliverAppBar',
+    icon: Icons.new_releases,
+  ),
 ];

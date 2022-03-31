@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:guiadewidget/views/sliver_app_bar.dart';
 import 'package:guiadewidget/views/animated_container_page.dart';
 import 'package:guiadewidget/views/expanded_page.dart';
 import 'package:guiadewidget/views/fade_transition_page.dart';
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
               const FloatingActionButtonPage(),
           '/PageView': (context) => const PageViewPage(),
           '/Table': (context) => const TablePage(),
+          '/SliverAppBar': (context) => const MySliverAppBar(),
         });
   }
 }

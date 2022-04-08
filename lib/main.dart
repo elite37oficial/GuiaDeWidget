@@ -9,6 +9,7 @@ import 'package:guiadewidget/views/home_page.dart';
 import 'package:guiadewidget/views/opacity_page.dart';
 import 'package:guiadewidget/views/page_view_page.dart';
 import 'package:guiadewidget/views/safearea_page.dart';
+import 'package:guiadewidget/views/sliver_list_grid_page.dart';
 import 'package:guiadewidget/views/table_page.dart';
 import 'package:guiadewidget/views/wrap_page.dart';
 
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
           '/PageView': (context) => const PageViewPage(),
           '/Table': (context) => const TablePage(),
           '/SliverAppBar': (context) => const MySliverAppBar(),
+          '/SliverListGrid': (context) => const SliverListGrid(),
         });
   }
 }

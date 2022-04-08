@@ -72,4 +72,11 @@ final List<CardHome> listWidget = [
     route: '/SliverAppBar',
     icon: Icons.new_releases,
   ),
+  CardHome(
+    title: 'SliverList e SliverGrid',
+    description:
+        'Um sliver que coloca vários filhos de caixa em uma matriz linear ao longo do eixo principal.',
+    route: '/SliverListGrid',
+    icon: Icons.new_releases,
+  ),
 ];

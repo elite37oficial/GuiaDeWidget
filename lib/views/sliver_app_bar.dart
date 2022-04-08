@@ -22,15 +22,16 @@ class MySliverAppBar extends StatelessWidget {
             ),
           ),
           SliverList(
-              delegate: SliverChildBuilderDelegate(((context, index) {
-            return Container(
-              width: 100,
-              color: getRondomColor(),
-              child: Center(
-                child: Text('$index', textScaleFactor: 4),
-              ),
-            );
-          }), childCount: 100))
+            delegate: SliverChildBuilderDelegate(((context, index) {
+              return Container(
+                width: 100,
+                color: getRondomColor(),
+                child: Center(
+                  child: Text('$index', textScaleFactor: 4),
+                ),
+              );
+            }), childCount: 100),
+          )
         ],
       ),
     );

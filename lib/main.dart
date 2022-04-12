@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:guiadewidget/views/fade_in_image_page.dart';
 import 'package:guiadewidget/views/sliver_app_bar.dart';
 import 'package:guiadewidget/views/animated_container_page.dart';
 import 'package:guiadewidget/views/expanded_page.dart';
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
           '/Table': (context) => const TablePage(),
           '/SliverAppBar': (context) => const MySliverAppBar(),
           '/SliverListGrid': (context) => const SliverListGrid(),
+          '/FadeInImage': (context) => const FadeInImagePage(),
         });
   }
 }

@@ -79,4 +79,11 @@ final List<CardHome> listWidget = [
     route: '/SliverListGrid',
     icon: Icons.new_releases,
   ),
+  CardHome(
+    title: 'FadeInImage',
+    description:
+        'Para evitar o efeito dissonante de imagens pipocando na tela à medida que são carregadas, tente usar FadeInImage! Você pode especificar uma imagem provisória local e definir os parâmetros de altura e de largura para estipular quanto espaço a imagem deve ocupar tão logo for carregada. ',
+    route: '/FadeInImage',
+    icon: Icons.new_releases,
+  ),
 ];

@@ -86,4 +86,18 @@ final List<CardHome> listWidget = [
     route: '/FadeInImage',
     icon: Icons.new_releases,
   ),
+  CardHome(
+    title: 'StreamBuilder',
+    description:
+        'Widget que se constrói com base no último instantâneo de interação com um Stream',
+    route: '/StreamBuilder',
+    icon: Icons.new_releases,
+  ),
+  CardHome(
+    title: 'ClipRRect',
+    description:
+        'Um widget que recorta seu filho usando um retângulo arredondado.',
+    route: '/ClipRRect',
+    icon: Icons.new_releases,
+  ),
 ];

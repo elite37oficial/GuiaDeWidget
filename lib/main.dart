@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:guiadewidget/views/clip_r_rect_page.dart';
 import 'package:guiadewidget/views/fade_in_image_page.dart';
 import 'package:guiadewidget/views/sliver_app_bar.dart';
 import 'package:guiadewidget/views/animated_container_page.dart';
@@ -11,6 +12,7 @@ import 'package:guiadewidget/views/opacity_page.dart';
 import 'package:guiadewidget/views/page_view_page.dart';
 import 'package:guiadewidget/views/safearea_page.dart';
 import 'package:guiadewidget/views/sliver_list_grid_page.dart';
+import 'package:guiadewidget/views/stream_builder_page.dart';
 import 'package:guiadewidget/views/table_page.dart';
 import 'package:guiadewidget/views/wrap_page.dart';
 
@@ -24,6 +26,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Guia De Widget',
         theme: ThemeData(
           primarySwatch: Colors.blue,
@@ -44,6 +47,8 @@ class MyApp extends StatelessWidget {
           '/SliverAppBar': (context) => const MySliverAppBar(),
           '/SliverListGrid': (context) => const SliverListGrid(),
           '/FadeInImage': (context) => const FadeInImagePage(),
+          '/StreamBuilder': (context) => const StreamBuilderPage(),
+          '/ClipRRect': (context) => const ClipRRectPage(),
         });
   }
 }

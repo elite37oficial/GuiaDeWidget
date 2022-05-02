@@ -19,7 +19,7 @@ class FadeInImagePage extends StatelessWidget {
                   url: 'https://elite37.com.br/wallpapers/wallpaper3.png'),
               MinhaImagemFadeIn(
                   url: 'https://elite37.com.br/wallpapers/wallpaper4.png'),
-              MinhaImagem(
+              MinhaImagemFadeIn(
                   url: 'https://elite37.com.br/wallpapers/wallpaper5.png'),
             ],
           ),

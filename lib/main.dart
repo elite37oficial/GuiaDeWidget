@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:guiadewidget/views/clip_r_rect_page.dart';
 import 'package:guiadewidget/views/fade_in_image_page.dart';
+import 'package:guiadewidget/views/hero_details_page.dart';
+import 'package:guiadewidget/views/hero_page.dart';
 import 'package:guiadewidget/views/sliver_app_bar.dart';
 import 'package:guiadewidget/views/animated_container_page.dart';
 import 'package:guiadewidget/views/expanded_page.dart';
@@ -49,6 +51,11 @@ class MyApp extends StatelessWidget {
           '/FadeInImage': (context) => const FadeInImagePage(),
           '/StreamBuilder': (context) => const StreamBuilderPage(),
           '/ClipRRect': (context) => const ClipRRectPage(),
+          '/Hero': (context) => const HeroPage(),
+          '/HeroDetails': (context) {
+            final args = ModalRoute.of(context)?.settings.arguments as Map;
+            return HeroDetailsPage(imagem: args['imagem'], nome: args['nome']);
+          }
         });
   }
 }

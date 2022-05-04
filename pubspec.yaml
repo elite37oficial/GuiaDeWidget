@@ -62,6 +62,9 @@ flutter:
   assets:
     - assets/images/loading.gif
     - assets/images/dash.png
+    - assets/images/dash_v1.png
+    - assets/images/dash_v2.png
+    - assets/images/dash_v3.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

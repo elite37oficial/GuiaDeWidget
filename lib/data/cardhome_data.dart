@@ -100,4 +100,10 @@ final List<CardHome> listWidget = [
     route: '/ClipRRect',
     icon: Icons.new_releases,
   ),
+  CardHome(
+    title: 'Hero',
+    description: 'Uma animação simples e super utilizada!',
+    route: '/Hero',
+    icon: Icons.new_releases,
+  ),
 ];

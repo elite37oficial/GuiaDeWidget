@@ -106,4 +106,10 @@ final List<CardHome> listWidget = [
     route: '/Hero',
     icon: Icons.new_releases,
   ),
+  CardHome(
+    title: 'CustomPaint',
+    description: 'Um widget aonde você pode desenhar',
+    route: '/CustomPaint',
+    icon: Icons.new_releases,
+  ),
 ];

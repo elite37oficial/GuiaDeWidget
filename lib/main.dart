@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:guiadewidget/views/clip_r_rect_page.dart';
+import 'package:guiadewidget/views/custom_paint_page.dart';
 import 'package:guiadewidget/views/fade_in_image_page.dart';
 import 'package:guiadewidget/views/hero_details_page.dart';
 import 'package:guiadewidget/views/hero_page.dart';
@@ -55,7 +56,8 @@ class MyApp extends StatelessWidget {
           '/HeroDetails': (context) {
             final args = ModalRoute.of(context)?.settings.arguments as Map;
             return HeroDetailsPage(imagem: args['imagem'], nome: args['nome']);
-          }
+          },
+          '/CustomPaint': (context) => const CustomPaintPage(),
         });
   }
 }

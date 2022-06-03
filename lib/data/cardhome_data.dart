@@ -96,7 +96,6 @@ final List<CardHome> listWidget = [
     title: 'CustomPaint',
     description: 'Um widget aonde você pode desenhar',
     route: '/CustomPaint',
-    icon: Icons.new_releases,
   ),
   CardHome(
     title: 'ToolTip',
@@ -110,6 +109,13 @@ final List<CardHome> listWidget = [
     description:
         'FittedBox ajuda a gerenciar as restrições de espaço e o layout de suas caixas.',
     route: '/FittedBox',
+    icon: Icons.new_releases,
+  ),
+  CardHome(
+    title: 'LayoutBuilder',
+    description:
+        'Constrói uma árvore de widgets que pode depender do tamanho do widget pai.',
+    route: '/LayoutBuilder',
     icon: Icons.new_releases,
   ),
 ];

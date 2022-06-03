@@ -5,6 +5,7 @@ import 'package:guiadewidget/views/fade_in_image_page.dart';
 import 'package:guiadewidget/views/fitted_box_page.dart';
 import 'package:guiadewidget/views/hero_details_page.dart';
 import 'package:guiadewidget/views/hero_page.dart';
+import 'package:guiadewidget/views/layout_builder_page.dart';
 import 'package:guiadewidget/views/sliver_app_bar.dart';
 import 'package:guiadewidget/views/animated_container_page.dart';
 import 'package:guiadewidget/views/expanded_page.dart';
@@ -62,6 +63,7 @@ class MyApp extends StatelessWidget {
           '/CustomPaint': (context) => const CustomPaintPage(),
           '/ToolTip': (context) => const CustomToolTip(),
           '/FittedBox': (context) => const FittedBoxCustom(),
+          '/LayoutBuilder': (context) => const LayoutBuilderCustom(),
         });
   }
 }

@@ -24,6 +24,8 @@ class _HomePageState extends State<HomePage> {
               title: listWidget[position].title,
               description: listWidget[position].description,
               icon: listWidget[position].icon,
+              code: listWidget[position].code,
+              urlVideo: listWidget[position].urlVideo,
             );
           }),
     );

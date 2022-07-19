@@ -4,6 +4,7 @@ import 'package:guiadewidget/views/expanded_page.dart';
 import 'package:guiadewidget/views/home_page.dart';
 import 'package:guiadewidget/views/opacity_page.dart';
 import 'package:guiadewidget/views/safearea_page.dart';
+import 'package:guiadewidget/views/syntax_page.dart';
 import 'package:guiadewidget/views/wrap_page.dart';
 
 void main() {
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
           '/wrap': (context) => const WrapPage(),
           '/AnimatedContainer': (context) => const AnimatedContainerPage(),
           '/Opacity': (context) => const OpacityPage(),
+          '/Syntax': (context) => const SyntaxPage(),
         });
   }
 }

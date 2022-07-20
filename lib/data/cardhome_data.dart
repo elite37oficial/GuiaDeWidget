@@ -192,4 +192,21 @@ final List<CardHomeModel> listWidget = [
     urlVideo: 'http://www.youtube.com',
     icon: Icons.new_releases,
   ),
+  CardHomeModel(
+    title: 'AbsorbPointer',
+    description: 'Bloquear um widget de ser clicado ou uma árvore de widget',
+    route: '/AbsorbPointer',
+    code: CodeEmpty.code,
+    urlVideo: 'http://www.youtube.com',
+    icon: Icons.new_releases,
+  ),
+  CardHomeModel(
+    title: 'Transform',
+    description:
+        'Um widget que aplica uma transformação antes de exibir o seu filho.',
+    route: '/Transform',
+    code: CodeEmpty.code,
+    urlVideo: 'http://www.youtube.com',
+    icon: Icons.new_releases,
+  ),
 ];

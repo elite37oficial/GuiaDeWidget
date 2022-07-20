@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:guiadewidget/views/absorb_pointer.dart';
 import 'package:guiadewidget/views/clip_r_rect_page.dart';
 import 'package:guiadewidget/views/custom_paint_page.dart';
 import 'package:guiadewidget/views/fade_in_image_page.dart';
@@ -21,6 +22,7 @@ import 'package:guiadewidget/views/sliver_list_grid_page.dart';
 import 'package:guiadewidget/views/stream_builder_page.dart';
 import 'package:guiadewidget/views/table_page.dart';
 import 'package:guiadewidget/views/tooltip_page.dart';
+import 'package:guiadewidget/views/transform.dart';
 import 'package:guiadewidget/views/wrap_page.dart';
 
 void main() {
@@ -66,6 +68,8 @@ class MyApp extends StatelessWidget {
           '/ToolTip': (context) => const CustomToolTip(),
           '/FittedBox': (context) => const FittedBoxCustom(),
           '/LayoutBuilder': (context) => const LayoutBuilderCustom(),
+          '/AbsorbPointer': (context) => const AbsorbPointerPage(),
+          '/Transform': (context) => const TransformPage()
         });
   }
 }

@@ -1,0 +1,36 @@
+import 'package:flutter/material.dart';
+
+class FadeTransitionPage extends StatefulWidget {
+  const FadeTransitionPage({Key? key}) : super(key: key);
+
+  @override
+  State<FadeTransitionPage> createState() => _FadeTransitionPageState();
+}
+
+class _FadeTransitionPageState extends State<FadeTransitionPage>
+    with TickerProviderStateMixin {
+  late final AnimationController _minhaAnimacao = AnimationController(
+    vsync: this,
+    duration: Duration(seconds: 1),
+  )..repeat(reverse: true);
+
+  late final Animation<double> _animacao =
+      CurvedAnimation(parent: _minhaAnimacao, curve: Curves.bounceInOut);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('FadeTransition')),
+      body: Center(
+        child: FadeTransition(
+          opacity: _animacao,
+          child: const Icon(
+            Icons.favorite,
+            size: 200,
+            color: Colors.blue,
+          ),
+        ),
+      ),
+    );
+  }
+}

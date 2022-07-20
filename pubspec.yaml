@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_syntax_view: ^4.0.0
   url_launcher: ^6.0.20
+  transparent_image: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -60,8 +61,12 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/images/loading.gif
+    - assets/images/dash.png
+    - assets/images/dash_v1.png
+    - assets/images/dash_v2.png
+    - assets/images/dash_v3.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

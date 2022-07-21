@@ -4,6 +4,8 @@ class cardHome extends StatefulWidget {
   final String title;
   final String description;
   final String route;
+  final String code;
+  final String urlVideo;
   final IconData? icon;
 
   const cardHome(
@@ -11,6 +13,8 @@ class cardHome extends StatefulWidget {
       required this.title,
       required this.route,
       required this.description,
+      required this.code,
+      required this.urlVideo,
       this.icon})
       : super(key: key);
 
@@ -22,7 +26,7 @@ class _cardHomeState extends State<cardHome> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.all(5),
+      margin: const EdgeInsets.all(5),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
       ),
@@ -32,12 +36,13 @@ class _cardHomeState extends State<cardHome> {
           leading: Icon(widget.icon, color: Colors.amber, size: 30),
           title: Text(
             widget.title,
-            style: TextStyle(fontSize: 20),
+            style: const TextStyle(fontSize: 20),
           ),
           subtitle: Text(widget.description),
-          trailing: Icon(Icons.arrow_forward_ios_rounded,
+          trailing: const Icon(Icons.arrow_forward_ios_rounded,
               color: Colors.grey, size: 20),
-          onTap: () => Navigator.of(context).pushNamed(widget.route),
+          onTap: () =>
+              Navigator.of(context).pushNamed(widget.route, arguments: widget),
         )
       ]),
     );

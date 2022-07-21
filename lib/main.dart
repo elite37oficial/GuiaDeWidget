@@ -17,10 +17,12 @@ import 'package:guiadewidget/views/home_page.dart';
 import 'package:guiadewidget/views/opacity_page.dart';
 import 'package:guiadewidget/views/page_view_page.dart';
 import 'package:guiadewidget/views/safearea_page.dart';
+import 'package:guiadewidget/views/syntax_page.dart';
 import 'package:guiadewidget/views/sliver_list_grid_page.dart';
 import 'package:guiadewidget/views/stream_builder_page.dart';
 import 'package:guiadewidget/views/table_page.dart';
 import 'package:guiadewidget/views/tooltip_page.dart';
+import 'package:guiadewidget/views/transform.dart';
 import 'package:guiadewidget/views/wrap_page.dart';
 
 void main() {
@@ -45,6 +47,7 @@ class MyApp extends StatelessWidget {
           '/wrap': (context) => const WrapPage(),
           '/AnimatedContainer': (context) => const AnimatedContainerPage(),
           '/Opacity': (context) => const OpacityPage(),
+          '/Syntax': (context) => const SyntaxPage(),
           '/FutureBuilder': (context) => const FutureBuilderPage(),
           '/FadeTransition': (context) => const FadeTransitionPage(),
           '/FloatingActionButton': (context) =>
@@ -66,6 +69,7 @@ class MyApp extends StatelessWidget {
           '/FittedBox': (context) => const FittedBoxCustom(),
           '/LayoutBuilder': (context) => const LayoutBuilderCustom(),
           '/AbsorbPointer': (context) => const AbsorbPointerCustom(),
+          '/Transform': (context) => const TransformPage()
         });
   }
 }

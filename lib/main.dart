@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:guiadewidget/views/absorb_pointer_page.dart';
 import 'package:guiadewidget/views/clip_r_rect_page.dart';
 import 'package:guiadewidget/views/custom_paint_page.dart';
 import 'package:guiadewidget/views/fade_in_image_page.dart';
@@ -64,6 +65,7 @@ class MyApp extends StatelessWidget {
           '/ToolTip': (context) => const CustomToolTip(),
           '/FittedBox': (context) => const FittedBoxCustom(),
           '/LayoutBuilder': (context) => const LayoutBuilderCustom(),
+          '/AbsorbPointer': (context) => const AbsorbPointerCustom(),
         });
   }
 }

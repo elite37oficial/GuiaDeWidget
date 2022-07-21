@@ -102,7 +102,6 @@ final List<CardHome> listWidget = [
     description:
         'O widget ToolTip é um ferramenta do "material Desing" usada para informar o usuário sobre a funcionalidade de um botão ou ação na Tela.',
     route: '/ToolTip',
-    icon: Icons.new_releases,
   ),
   CardHome(
     title: 'FittedBox',
@@ -116,6 +115,13 @@ final List<CardHome> listWidget = [
     description:
         'Constrói uma árvore de widgets que pode depender do tamanho do widget pai.',
     route: '/LayoutBuilder',
+    icon: Icons.new_releases,
+  ),
+  CardHome(
+    title: 'AbsorbPointer',
+    description:
+        'Quando absorbing for true, esse widget impede que sua subárvore receba eventos de ponteiro.',
+    route: '/AbsorbPointer',
     icon: Icons.new_releases,
   ),
 ];

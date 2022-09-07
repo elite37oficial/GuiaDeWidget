@@ -14,15 +14,13 @@ class AbsorbPointerPage extends StatelessWidget {
             Row(children: const [
               MyButton(texto: 'Preto', cor: Colors.black),
               MyButton(texto: 'Azul', cor: Colors.blue, ativo: false),
-              MyButton(texto: 'Amarelo', cor: Colors.yellow, ativo: false),
             ]),
             AbsorbPointer(
-              absorbing: false,
+              absorbing: true,
               child: Row(
                 children: const [
                   MyButton(texto: 'Verde', cor: Colors.green),
                   MyButton(texto: 'Vermelho', cor: Colors.red),
-                  MyButton(texto: 'Cinza', cor: Colors.grey),
                 ],
               ),
             )

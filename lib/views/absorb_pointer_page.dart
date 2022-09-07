@@ -1,23 +1,7 @@
 import 'package:flutter/material.dart';
 
-class AbsorbPointerCustom extends StatefulWidget {
-  const AbsorbPointerCustom({Key? key}) : super(key: key);
-
-  @override
-  State<AbsorbPointerCustom> createState() => _AbsorbPointerCustomState();
-}
-
-class _AbsorbPointerCustomState extends State<AbsorbPointerCustom> {
-  bool bloqueiaVerde = false;
-  bool bloqueiaVermelho = false;
-  final snackBarVermelho = const SnackBar(
-    backgroundColor: Colors.red,
-    content: Text('Vermelho clicado!'),
-  );
-  final snackBarVerde = const SnackBar(
-    backgroundColor: Colors.green,
-    content: Text('Verde clicado!'),
-  );
+class AbsorbPointerPage extends StatelessWidget {
+  const AbsorbPointerPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,84 +9,61 @@ class _AbsorbPointerCustomState extends State<AbsorbPointerCustom> {
         appBar: AppBar(
           title: Text('AbsorbPointer'),
         ),
-        body: Center(
-          child: Column(
-            children: [
-              Stack(
-                alignment: AlignmentDirectional.center,
-                children: <Widget>[
-                  SizedBox(
-                    width: 200.0,
-                    height: 100.0,
-                    child: AbsorbPointer(
-                      absorbing: bloqueiaVermelho,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.red,
-                        ),
-                        onPressed: () {
-                          ScaffoldMessenger.of(context)
-                              .showSnackBar(snackBarVermelho);
-                        },
-                        child: null,
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 100.0,
-                    height: 200.0,
-                    child: AbsorbPointer(
-                      absorbing: bloqueiaVerde,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          primary: Colors.green,
-                        ),
-                        onPressed: () {
-                          ScaffoldMessenger.of(context)
-                              .showSnackBar(snackBarVerde);
-                        },
-                        child: null,
-                      ),
-                    ),
-                  ),
+        body: Column(
+          children: [
+            Row(children: const [
+              MyButton(texto: 'Preto', cor: Colors.black),
+              MyButton(texto: 'Azul', cor: Colors.blue, ativo: false),
+            ]),
+            AbsorbPointer(
+              absorbing: false,
+              child: Row(
+                children: const [
+                  MyButton(texto: 'Verde', cor: Colors.green),
+                  MyButton(texto: 'Vermelho', cor: Colors.red),
                 ],
               ),
-              SizedBox(
-                width: 200,
-                height: 200,
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text('Bloqueia o verde'),
-                        Switch(
-                            value: bloqueiaVerde,
-                            onChanged: (bool newValue) {
-                              setState(() {
-                                bloqueiaVerde = newValue;
-                              });
-                            }),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text('Bloqueia o vermelho'),
-                        Switch(
-                            value: bloqueiaVermelho,
-                            onChanged: (bool newValue) {
-                              setState(() {
-                                bloqueiaVermelho = newValue;
-                              });
-                            }),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+            )
+          ],
         ));
+  }
+}
+
+class MyButton extends StatelessWidget {
+  final Color cor;
+  final String texto;
+  final bool ativo;
+
+  const MyButton({
+    Key? key,
+    required this.cor,
+    required this.texto,
+    this.ativo = true,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: SizedBox(
+        width: 200.0,
+        height: 100.0,
+        child: AbsorbPointer(
+          absorbing: !ativo,
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: cor,
+            ),
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                duration: const Duration(milliseconds: 300),
+                content: Text(texto),
+              ));
+            },
+            child: Text(texto),
+          ),
+        ),
+      ),
+    );
   }
 }

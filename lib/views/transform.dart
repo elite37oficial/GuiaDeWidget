@@ -51,10 +51,14 @@ class _TransformPageState extends State<TransformPage> {
                 Transform(
                   transform: Matrix4.skewX(_mySkewX),
                   // transform: Matrix4.skewY(0.4),
-                  child: SizedBox(
+                  child: const SizedBox(
                     width: 150,
                     height: 150,
-                    child: Image.asset('assets/images/dash_v2.png'),
+                    child: Center(
+                        child: Text(
+                      'Elite37',
+                      textScaleFactor: 4,
+                    )),
                   ),
                 ),
                 Slider(
@@ -88,7 +92,7 @@ class _TransformPageState extends State<TransformPage> {
                       });
                     }),
                 Transform.translate(
-                  offset: Offset(_myPositionX, 0),
+                  offset: Offset(0, _myPositionX),
                   child: SizedBox(
                     width: 150,
                     height: 150,

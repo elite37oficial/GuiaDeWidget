@@ -10,7 +10,7 @@ class BackdropFilterPage extends StatefulWidget {
 }
 
 class _BackdropFilterPageState extends State<BackdropFilterPage> {
-  double _myBlur = 0.1;
+  double _myBlur = 5;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +21,6 @@ class _BackdropFilterPageState extends State<BackdropFilterPage> {
             children: <Widget>[
               Image.asset('assets/images/logoElite37.png'),
               ClipRect(
-                // <-- clips to the 200x200 [Container] below
                 child: BackdropFilter(
                   filter: ImageFilter.blur(
                     sigmaX: _myBlur,

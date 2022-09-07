@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:guiadewidget/views/absorb_pointer.dart';
+import 'package:guiadewidget/views/backdropfilter.dart';
 import 'package:guiadewidget/views/clip_r_rect_page.dart';
 import 'package:guiadewidget/views/custom_paint_page.dart';
 import 'package:guiadewidget/views/fade_in_image_page.dart';
@@ -69,7 +70,8 @@ class MyApp extends StatelessWidget {
           '/FittedBox': (context) => const FittedBoxCustom(),
           '/LayoutBuilder': (context) => const LayoutBuilderCustom(),
           '/AbsorbPointer': (context) => const AbsorbPointerPage(),
-          '/Transform': (context) => const TransformPage()
+          '/Transform': (context) => const TransformPage(),
+          '/BackdropFilter': (context) => const BackdropFilterPage()
         });
   }
 }

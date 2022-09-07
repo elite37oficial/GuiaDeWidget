@@ -209,4 +209,13 @@ final List<CardHomeModel> listWidget = [
     urlVideo: 'http://www.youtube.com',
     icon: Icons.new_releases,
   ),
+  CardHomeModel(
+    title: 'BackdropFilter',
+    description:
+        'Um widget que aplica um filtro ao conteúdo desenhado existente e depois desenha o filho.',
+    route: '/BackdropFilter',
+    code: CodeEmpty.code,
+    urlVideo: 'http://www.youtube.com',
+    icon: Icons.new_releases,
+  )
 ];

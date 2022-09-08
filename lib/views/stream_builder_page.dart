@@ -58,7 +58,7 @@ class StreamBuilderPage extends StatelessWidget {
                     size: 100,
                   ),
                   Padding(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     child: Text(snapshot.data.toString(), textScaleFactor: 5),
                   )
                 ];
@@ -71,7 +71,7 @@ class StreamBuilderPage extends StatelessWidget {
                     size: 100,
                   ),
                   Padding(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     child: Text(snapshot.data.toString() + ('Fim'),
                         textScaleFactor: 5),
                   )

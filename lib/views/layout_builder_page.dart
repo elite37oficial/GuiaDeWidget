@@ -69,7 +69,7 @@ class _LayoutBuilderCustomState extends State<LayoutBuilderCustom> {
   }
 
   Widget _buildWideContainers() {
-    return Container(
+    return SizedBox(
       height: 300.0,
       width: double.infinity,
       child: Padding(
@@ -85,8 +85,8 @@ class _LayoutBuilderCustomState extends State<LayoutBuilderCustom> {
                 width: 300,
               ),
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text('Eu Sou o Super Dash', textScaleFactor: 2),
-                Text('uma das minhas habilidade é voar!'),
+                const Text('Eu Sou o Super Dash', textScaleFactor: 2),
+                const Text('uma das minhas habilidade é voar!'),
                 Row(
                   children: [
                     Column(

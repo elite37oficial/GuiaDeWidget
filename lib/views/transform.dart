@@ -26,7 +26,8 @@ class _TransformPageState extends State<TransformPage> {
           children: [
             ListView(
               shrinkWrap: true,
-              padding: EdgeInsets.all(15.0),
+              physics: const NeverScrollableScrollPhysics(),
+              padding: const EdgeInsets.all(15.0),
               children: [
                 Transform.scale(
                   alignment: Alignment.bottomCenter,

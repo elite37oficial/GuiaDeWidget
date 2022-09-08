@@ -11,7 +11,7 @@ class _FadeTransitionPageState extends State<FadeTransitionPage>
     with TickerProviderStateMixin {
   late final AnimationController _minhaAnimacao = AnimationController(
     vsync: this,
-    duration: Duration(seconds: 1),
+    duration: const Duration(seconds: 1),
   )..repeat(reverse: true);
 
   late final Animation<double> _animacao =

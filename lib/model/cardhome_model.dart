@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:guiadewidget/model/code_model.dart';
 
 class CardHomeModel {
   //modal class for Person object

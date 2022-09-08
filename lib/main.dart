@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         routes: {
-          '/': (context) => HomePage(),
+          '/': (context) => const HomePage(),
           '/safaarea': (context) => const SafeareaPage(),
           '/expanded': (context) => const ExpandedPage(),
           '/wrap': (context) => const WrapPage(),
@@ -52,8 +52,7 @@ class MyApp extends StatelessWidget {
           '/Syntax': (context) => const SyntaxPage(),
           '/FutureBuilder': (context) => const FutureBuilderPage(),
           '/FadeTransition': (context) => const FadeTransitionPage(),
-          '/FloatingActionButton': (context) =>
-              const FloatingActionButtonPage(),
+          '/FloatingActionButton': (context) => const FloatingActionButtonPage(),
           '/PageView': (context) => const PageViewPage(),
           '/Table': (context) => const TablePage(),
           '/SliverAppBar': (context) => const MySliverAppBar(),

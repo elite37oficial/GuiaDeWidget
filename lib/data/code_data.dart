@@ -276,7 +276,7 @@ class _OpacityPageState extends State<OpacityPage> {
   ),
 ];
 
-final CodeModel CodeEmpty = CodeModel(
+final CodeModel codeEmpty = CodeModel(
   title: 'Veja o Código',
   code: '{teste}',
 );

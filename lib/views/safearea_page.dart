@@ -8,10 +8,8 @@ class SafeareaPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Future<void>? _launched;
     LaucherUrl laucher = LaucherUrl();
-    final cardHome args =
-        ModalRoute.of(context)?.settings.arguments as cardHome;
+    final CardHome args = ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
       appBar: AppBar(title: Text(args.title), actions: <Widget>[
         Padding(
@@ -30,7 +28,7 @@ class SafeareaPage extends StatelessWidget {
           padding: const EdgeInsets.only(right: 20.0),
           child: GestureDetector(
             onTap: () async {
-              _launched = laucher.goUrl(url: args.urlVideo);
+              laucher.goUrl(url: args.urlVideo);
             },
             child: const Icon(
               Icons.smart_display,
@@ -40,25 +38,23 @@ class SafeareaPage extends StatelessWidget {
         )
       ]),
       body: SafeArea(
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                color: Colors.yellow,
-                width: 200,
-                height: 70,
-              ),
-              Container(
-                color: Colors.black,
-                width: 200,
-                height: 70,
-              ),
-              Container(
-                color: Colors.blue,
-                width: 200,
-                height: 70,
-              )
-            ]),
+        child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+          Container(
+            color: Colors.yellow,
+            width: 200,
+            height: 70,
+          ),
+          Container(
+            color: Colors.black,
+            width: 200,
+            height: 70,
+          ),
+          Container(
+            color: Colors.blue,
+            width: 200,
+            height: 70,
+          )
+        ]),
       ),
     );
   }

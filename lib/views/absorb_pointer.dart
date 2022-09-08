@@ -7,21 +7,30 @@ class AbsorbPointerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('AbsorbPointer'),
+          title: const Text('AbsorbPointer'),
         ),
         body: Column(
           children: [
             Row(children: const [
-              MyButton(texto: 'Preto', cor: Colors.black),
-              MyButton(texto: 'Azul', cor: Colors.blue, ativo: false),
+              Flexible(child: MyButton(texto: 'Preto', cor: Colors.black)),
+              Flexible(child: MyButton(texto: 'Azul', cor: Colors.blue)),
             ]),
             AbsorbPointer(
               absorbing: true,
               child: Row(
                 children: const [
-                  MyButton(texto: 'Verde', cor: Colors.green),
-                  MyButton(texto: 'Vermelho', cor: Colors.red),
+                  Flexible(child: MyButton(texto: 'Verde', cor: Colors.green)),
+                  Flexible(child: MyButton(texto: 'Vermelho', cor: Colors.red)),
                 ],
+              ),
+            ),
+            const SizedBox(height: 40),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Text(
+                "Verde e vermelho estão em uma Row e envolvidos com o AbsorbPointer!",
+                style: TextStyle(fontSize: 26, color: Colors.blueGrey),
+                textAlign: TextAlign.center,
               ),
             )
           ],
@@ -52,7 +61,7 @@ class MyButton extends StatelessWidget {
           absorbing: !ativo,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-              primary: cor,
+              backgroundColor: cor,
             ),
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(SnackBar(

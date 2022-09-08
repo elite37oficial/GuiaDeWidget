@@ -9,8 +9,7 @@ class SyntaxPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cardHome args =
-        ModalRoute.of(context)?.settings.arguments as cardHome;
+    final CardHome args = ModalRoute.of(context)?.settings.arguments as CardHome;
     final String code = args.code;
 
     return Scaffold(
@@ -24,7 +23,7 @@ class SyntaxPage extends StatelessWidget {
                   content: Text("Código copiado!"),
                 ));
               },
-              child: Icon(
+              child: const Icon(
                 Icons.copy,
                 size: 26.0,
               ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class cardHome extends StatefulWidget {
+class CardHome extends StatefulWidget {
   final String title;
   final String description;
   final String route;
@@ -8,21 +8,13 @@ class cardHome extends StatefulWidget {
   final String urlVideo;
   final IconData? icon;
 
-  const cardHome(
-      {Key? key,
-      required this.title,
-      required this.route,
-      required this.description,
-      required this.code,
-      required this.urlVideo,
-      this.icon})
-      : super(key: key);
+  const CardHome({Key? key, required this.title, required this.route, required this.description, required this.code, required this.urlVideo, this.icon}) : super(key: key);
 
   @override
-  State<cardHome> createState() => _cardHomeState();
+  State<CardHome> createState() => _CardHomeState();
 }
 
-class _cardHomeState extends State<cardHome> {
+class _CardHomeState extends State<CardHome> {
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -39,10 +31,8 @@ class _cardHomeState extends State<cardHome> {
             style: const TextStyle(fontSize: 20),
           ),
           subtitle: Text(widget.description),
-          trailing: const Icon(Icons.arrow_forward_ios_rounded,
-              color: Colors.grey, size: 20),
-          onTap: () =>
-              Navigator.of(context).pushNamed(widget.route, arguments: widget),
+          trailing: const Icon(Icons.arrow_forward_ios_rounded, color: Colors.grey, size: 20),
+          onTap: () => Navigator.of(context).pushNamed(widget.route, arguments: widget),
         )
       ]),
     );

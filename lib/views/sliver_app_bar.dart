@@ -16,7 +16,7 @@ class MySliverAppBar extends StatelessWidget {
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
               centerTitle: true,
-              title: Text('SliverAppBar'),
+              title: const Text('SliverAppBar'),
               background: Image.network(
                   'https://elite37.com.br/wallpapers/min/wallpaper5_min.png'),
             ),

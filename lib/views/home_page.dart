@@ -3,7 +3,7 @@ import 'package:guiadewidget/components/cards.dart';
 import '../data/cardhome_data.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -15,11 +15,12 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Guia de Widget'),
+        centerTitle: true,
       ),
       body: ListView.builder(
           itemCount: listWidget.length,
           itemBuilder: (context, position) {
-            return cardHome(
+            return CardHome(
               route: listWidget[position].route,
               title: listWidget[position].title,
               description: listWidget[position].description,

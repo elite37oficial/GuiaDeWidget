@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:guiadewidget/components/app_bar.dart';
+import 'package:guiadewidget/components/app_bar_custom.dart';
 import 'package:guiadewidget/components/cards.dart';
 
 class CustomPaintPage extends StatelessWidget {
@@ -11,7 +11,9 @@ class CustomPaintPage extends StatelessWidget {
     final CardHome args =
         ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
-      appBar: customAppBar(args, context),
+      appBar: AppBarCustom(
+        args: args,
+      ),
       body: Wrap(
         direction: Axis.horizontal,
         spacing: 5,

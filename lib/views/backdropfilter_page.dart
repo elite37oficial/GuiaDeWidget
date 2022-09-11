@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:guiadewidget/components/app_bar.dart';
+import 'package:guiadewidget/components/app_bar_custom.dart';
 import 'package:guiadewidget/components/cards.dart';
 
 class BackdropFilterPage extends StatefulWidget {
@@ -18,7 +18,9 @@ class _BackdropFilterPageState extends State<BackdropFilterPage> {
     final CardHome args =
         ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
-      appBar: customAppBar(args, context),
+      appBar: AppBarCustom(
+        args: args,
+      ),
       body: Column(
         children: [
           Stack(

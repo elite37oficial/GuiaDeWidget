@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:guiadewidget/components/app_bar.dart';
+import 'package:guiadewidget/components/app_bar_custom.dart';
 
 import 'package:guiadewidget/components/cards.dart';
 
@@ -20,7 +20,9 @@ class SliverListGrid extends StatelessWidget {
     final CardHome args =
         ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
-      appBar: customAppBar(args, context),
+      appBar: AppBarCustom(
+        args: args,
+      ),
       body: CustomScrollView(slivers: [
         makeHeader('Sliver Grid'),
         SliverGrid.count(

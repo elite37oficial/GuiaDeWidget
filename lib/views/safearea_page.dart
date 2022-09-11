@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:guiadewidget/components/cards.dart';
-import 'package:guiadewidget/components/app_bar.dart';
+import 'package:guiadewidget/components/app_bar_custom.dart';
 
 class SafeareaPage extends StatelessWidget {
   const SafeareaPage({Key? key}) : super(key: key);
@@ -10,7 +10,9 @@ class SafeareaPage extends StatelessWidget {
     final CardHome args =
         ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
-      appBar: customAppBar(args, context),
+      appBar: AppBarCustom(
+        args: args,
+      ),
       body: SafeArea(
         child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

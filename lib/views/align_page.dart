@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:guiadewidget/components/app_bar.dart';
+import 'package:guiadewidget/components/app_bar_custom.dart';
 import 'package:guiadewidget/components/cards.dart';
 
 class AlignPage extends StatefulWidget {
@@ -17,7 +17,9 @@ class _AlignPageState extends State<AlignPage> {
     final CardHome args =
         ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
-      appBar: customAppBar(args, context),
+      appBar: AppBarCustom(
+        args: args,
+      ),
       body: Center(
         child: Column(
           children: [

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:guiadewidget/components/app_bar.dart';
+import 'package:guiadewidget/components/app_bar_custom.dart';
 import 'package:guiadewidget/components/cards.dart';
 
 class ClipRRectPage extends StatefulWidget {
@@ -17,7 +17,9 @@ class _ClipRRectPageState extends State<ClipRRectPage> {
         ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
         backgroundColor: Colors.black87,
-        appBar: customAppBar(args, context),
+        appBar: AppBarCustom(
+          args: args,
+        ),
         body: SingleChildScrollView(
           child: Column(
             children: [

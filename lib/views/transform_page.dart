@@ -1,6 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:guiadewidget/components/app_bar.dart';
+import 'package:guiadewidget/components/cards.dart';
 
 class TransformPage extends StatefulWidget {
   const TransformPage({Key? key}) : super(key: key);
@@ -17,10 +19,10 @@ class _TransformPageState extends State<TransformPage> {
 
   @override
   Widget build(BuildContext context) {
+    final CardHome args =
+        ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Transform'),
-      ),
+      appBar: customAppBar(args, context),
       body: SingleChildScrollView(
         child: Column(
           children: [

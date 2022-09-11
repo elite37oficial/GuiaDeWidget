@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:guiadewidget/components/app_bar.dart';
+import 'package:guiadewidget/components/cards.dart';
 
 class AnimatedContainerPage extends StatefulWidget {
   const AnimatedContainerPage({Key? key}) : super(key: key);
@@ -12,8 +14,10 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
 
   @override
   Widget build(BuildContext context) {
+    final CardHome args =
+        ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
-      appBar: AppBar(title: const Text("AnimatedContainer")),
+      appBar: customAppBar(args, context),
       body: GestureDetector(
         onTap: () {
           setState(() {

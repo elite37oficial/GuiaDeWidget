@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:guiadewidget/components/cards.dart';
-import '../data/cardhome_data.dart';
+import 'package:guiadewidget/data/cardhome_data.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
               title: listWidget[position].title,
               description: listWidget[position].description,
               icon: listWidget[position].icon,
-              code: listWidget[position].code,
+              fileName: listWidget[position].fileName,
               urlVideo: listWidget[position].urlVideo,
             );
           }),

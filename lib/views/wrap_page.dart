@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:guiadewidget/components/app_bar.dart';
+import 'package:guiadewidget/components/cards.dart';
+
 class WrapPage extends StatefulWidget {
   const WrapPage({Key? key}) : super(key: key);
 
@@ -12,10 +15,10 @@ class _SafeareaPageState extends State<WrapPage> {
 
   @override
   Widget build(BuildContext context) {
+    final CardHome args =
+        ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('#3 Wrap'),
-        ),
+        appBar: customAppBar(args, context),
         body: Wrap(
           direction: Axis.vertical,
           spacing: 5,

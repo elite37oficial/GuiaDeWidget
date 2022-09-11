@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:guiadewidget/components/app_bar.dart';
+import 'package:guiadewidget/components/cards.dart';
 
 class PageViewPage extends StatelessWidget {
   const PageViewPage({Key? key}) : super(key: key);
@@ -6,8 +8,10 @@ class PageViewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final PageController pageViewController = PageController(initialPage: 0);
+    final CardHome args =
+        ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
-      appBar: AppBar(title: const Text('PageView')),
+      appBar: customAppBar(args, context),
       body: PageView(
         controller: pageViewController,
         scrollDirection: Axis.vertical,

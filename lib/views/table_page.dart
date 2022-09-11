@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:guiadewidget/components/app_bar.dart';
+import 'package:guiadewidget/components/cards.dart';
 
 class TablePage extends StatelessWidget {
   const TablePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final CardHome args =
+        ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
-      appBar: AppBar(title: const Text('Table')),
+      appBar: customAppBar(args, context),
       body: Table(
           columnWidths: const <int, TableColumnWidth>{
             0: FixedColumnWidth(30),

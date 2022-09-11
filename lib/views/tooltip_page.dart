@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:guiadewidget/components/app_bar.dart';
+
+import 'package:guiadewidget/components/cards.dart';
 
 class CustomToolTip extends StatelessWidget {
   const CustomToolTip({Key? key}) : super(key: key);
@@ -6,9 +9,10 @@ class CustomToolTip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final GlobalKey<TooltipState> tooltipkey = GlobalKey<TooltipState>();
-
+    final CardHome args =
+        ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
-      appBar: AppBar(title: const Text('ToolTip')),
+      appBar: customAppBar(args, context),
       body: Center(
         child: Tooltip(
           message: 'Olá eu sou o ToolTip',

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:guiadewidget/components/app_bar.dart';
+import 'package:guiadewidget/components/cards.dart';
 
 class LayoutBuilderCustom extends StatefulWidget {
   const LayoutBuilderCustom({Key? key}) : super(key: key);
@@ -10,8 +12,10 @@ class LayoutBuilderCustom extends StatefulWidget {
 class _LayoutBuilderCustomState extends State<LayoutBuilderCustom> {
   @override
   Widget build(BuildContext context) {
+    final CardHome args =
+        ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
-      appBar: AppBar(title: const Text('LayoutBuilder')),
+      appBar: customAppBar(args, context),
       body: LayoutBuilder(
         builder: (context, constraints) {
           if (constraints.maxWidth > 600) {

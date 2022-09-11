@@ -37,6 +37,7 @@ dependencies:
   flutter_syntax_view: ^4.0.0
   url_launcher: ^6.0.20
   transparent_image: ^2.0.0
+  
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,8 @@ flutter:
     - assets/images/dash_v2.png
     - assets/images/dash_v3.png
     - assets/images/logoElite37.png
+    - lib/views/
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -4,11 +4,19 @@ class CardHome extends StatefulWidget {
   final String title;
   final String description;
   final String route;
-  final String code;
+  final String fileName;
   final String urlVideo;
   final IconData? icon;
 
-  const CardHome({Key? key, required this.title, required this.route, required this.description, required this.code, required this.urlVideo, this.icon}) : super(key: key);
+  const CardHome(
+      {Key? key,
+      required this.title,
+      required this.route,
+      required this.description,
+      required this.fileName,
+      required this.urlVideo,
+      this.icon})
+      : super(key: key);
 
   @override
   State<CardHome> createState() => _CardHomeState();
@@ -31,8 +39,10 @@ class _CardHomeState extends State<CardHome> {
             style: const TextStyle(fontSize: 20),
           ),
           subtitle: Text(widget.description),
-          trailing: const Icon(Icons.arrow_forward_ios_rounded, color: Colors.grey, size: 20),
-          onTap: () => Navigator.of(context).pushNamed(widget.route, arguments: widget),
+          trailing: const Icon(Icons.arrow_forward_ios_rounded,
+              color: Colors.grey, size: 20),
+          onTap: () =>
+              Navigator.of(context).pushNamed(widget.route, arguments: widget),
         )
       ]),
     );

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:guiadewidget/components/app_bar.dart';
+import 'package:guiadewidget/components/cards.dart';
+
 class ExpandedPage extends StatefulWidget {
   const ExpandedPage({Key? key}) : super(key: key);
 
@@ -14,10 +17,10 @@ class _SafeareaPageState extends State<ExpandedPage> {
 
   @override
   Widget build(BuildContext context) {
+    final CardHome args =
+        ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('#2 Expanded'),
-      ),
+      appBar: customAppBar(args, context),
       body: Row(children: [
         Expanded(
           flex: bloco2,

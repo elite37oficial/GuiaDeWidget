@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:guiadewidget/components/app_bar.dart';
+import 'package:guiadewidget/components/cards.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class FadeInImagePage extends StatelessWidget {
@@ -6,8 +8,10 @@ class FadeInImagePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final CardHome args =
+        ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
-        appBar: AppBar(title: const Text('FadeInImage')),
+        appBar: customAppBar(args, context),
         body: SingleChildScrollView(
           child: Column(
             children: const [

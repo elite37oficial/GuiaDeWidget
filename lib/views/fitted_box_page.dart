@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 
+import 'package:guiadewidget/components/app_bar.dart';
+import 'package:guiadewidget/components/cards.dart';
+
 class FittedBoxCustom extends StatelessWidget {
   const FittedBoxCustom({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final CardHome args =
+        ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
-      appBar: AppBar(title: const Text('FittedBox')),
+      appBar: customAppBar(args, context),
       body: Center(
         child: Container(
             width: 300,

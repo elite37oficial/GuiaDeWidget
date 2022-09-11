@@ -1,6 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:guiadewidget/components/app_bar.dart';
+
+import 'package:guiadewidget/components/cards.dart';
 
 class SliverListGrid extends StatelessWidget {
   const SliverListGrid({Key? key}) : super(key: key);
@@ -14,10 +17,10 @@ class SliverListGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final CardHome args =
+        ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Sliver List & Grid'),
-      ),
+      appBar: customAppBar(args, context),
       body: CustomScrollView(slivers: [
         makeHeader('Sliver Grid'),
         SliverGrid.count(

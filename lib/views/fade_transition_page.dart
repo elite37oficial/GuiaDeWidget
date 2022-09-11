@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:guiadewidget/components/app_bar.dart';
+import 'package:guiadewidget/components/cards.dart';
+
 class FadeTransitionPage extends StatefulWidget {
   const FadeTransitionPage({Key? key}) : super(key: key);
 
@@ -19,8 +22,10 @@ class _FadeTransitionPageState extends State<FadeTransitionPage>
 
   @override
   Widget build(BuildContext context) {
+    final CardHome args =
+        ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
-      appBar: AppBar(title: const Text('FadeTransition')),
+      appBar: customAppBar(args, context),
       body: Center(
         child: FadeTransition(
           opacity: _animacao,

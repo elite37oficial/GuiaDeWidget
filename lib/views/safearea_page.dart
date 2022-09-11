@@ -1,60 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:guiadewidget/components/cards.dart';
-
-import '../utils/launcher_url_utils.dart';
+import 'package:guiadewidget/components/app_bar.dart';
 
 class SafeareaPage extends StatelessWidget {
   const SafeareaPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    LaucherUrl laucher = LaucherUrl();
-    final CardHome args = ModalRoute.of(context)?.settings.arguments as CardHome;
+    final CardHome args =
+        ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
-      appBar: AppBar(title: Text(args.title), actions: <Widget>[
-        Padding(
-          padding: const EdgeInsets.only(right: 20.0),
-          child: GestureDetector(
-            onTap: () {
-              Navigator.of(context).pushNamed('/Syntax', arguments: args);
-            },
-            child: const Icon(
-              Icons.code,
-              size: 26.0,
-            ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(right: 20.0),
-          child: GestureDetector(
-            onTap: () async {
-              laucher.goUrl(url: args.urlVideo);
-            },
-            child: const Icon(
-              Icons.smart_display,
-              size: 26.0,
-            ),
-          ),
-        )
-      ]),
+      appBar: customAppBar(args, context),
       body: SafeArea(
-        child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          Container(
-            color: Colors.yellow,
-            width: 200,
-            height: 70,
-          ),
-          Container(
-            color: Colors.black,
-            width: 200,
-            height: 70,
-          ),
-          Container(
-            color: Colors.blue,
-            width: 200,
-            height: 70,
-          )
-        ]),
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                color: Colors.yellow,
+                width: 200,
+                height: 70,
+              ),
+              Container(
+                color: Colors.black,
+                width: 200,
+                height: 70,
+              ),
+              Container(
+                color: Colors.blue,
+                width: 200,
+                height: 70,
+              )
+            ]),
       ),
     );
   }

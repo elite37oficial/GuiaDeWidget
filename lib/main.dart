@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:guiadewidget/views/absorb_pointer.dart';
-import 'package:guiadewidget/views/align.dart';
-import 'package:guiadewidget/views/backdropfilter.dart';
+import 'package:guiadewidget/views/absorb_pointer_page.dart';
+import 'package:guiadewidget/views/align_page.dart';
+import 'package:guiadewidget/views/backdropfilter_page.dart';
 import 'package:guiadewidget/views/clip_r_rect_page.dart';
 import 'package:guiadewidget/views/custom_paint_page.dart';
 import 'package:guiadewidget/views/fade_in_image_page.dart';
@@ -9,7 +9,7 @@ import 'package:guiadewidget/views/fitted_box_page.dart';
 import 'package:guiadewidget/views/hero_details_page.dart';
 import 'package:guiadewidget/views/hero_page.dart';
 import 'package:guiadewidget/views/layout_builder_page.dart';
-import 'package:guiadewidget/views/sliver_app_bar.dart';
+import 'package:guiadewidget/views/sliver_app_bar_page.dart';
 import 'package:guiadewidget/views/animated_container_page.dart';
 import 'package:guiadewidget/views/expanded_page.dart';
 import 'package:guiadewidget/views/fade_transition_page.dart';
@@ -24,7 +24,7 @@ import 'package:guiadewidget/views/sliver_list_grid_page.dart';
 import 'package:guiadewidget/views/stream_builder_page.dart';
 import 'package:guiadewidget/views/table_page.dart';
 import 'package:guiadewidget/views/tooltip_page.dart';
-import 'package:guiadewidget/views/transform.dart';
+import 'package:guiadewidget/views/transform_page.dart';
 import 'package:guiadewidget/views/wrap_page.dart';
 
 void main() {
@@ -52,7 +52,8 @@ class MyApp extends StatelessWidget {
           '/Syntax': (context) => const SyntaxPage(),
           '/FutureBuilder': (context) => const FutureBuilderPage(),
           '/FadeTransition': (context) => const FadeTransitionPage(),
-          '/FloatingActionButton': (context) => const FloatingActionButtonPage(),
+          '/FloatingActionButton': (context) =>
+              const FloatingActionButtonPage(),
           '/PageView': (context) => const PageViewPage(),
           '/Table': (context) => const TablePage(),
           '/SliverAppBar': (context) => const MySliverAppBar(),

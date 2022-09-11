@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:guiadewidget/components/app_bar.dart';
+import 'package:guiadewidget/components/cards.dart';
 
 class OpacityPage extends StatefulWidget {
   const OpacityPage({Key? key}) : super(key: key);
@@ -12,7 +14,10 @@ class _OpacityPageState extends State<OpacityPage> {
 
   @override
   Widget build(BuildContext context) {
+    final CardHome args =
+        ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
+      appBar: customAppBar(args, context),
       body: Center(
         child: Column(children: [
           Container(width: 100, height: 100, color: Colors.blue),

@@ -1,6 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:guiadewidget/components/app_bar.dart';
+import 'package:guiadewidget/components/cards.dart';
 
 class StreamBuilderPage extends StatelessWidget {
   const StreamBuilderPage({Key? key}) : super(key: key);
@@ -18,8 +20,10 @@ class StreamBuilderPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final CardHome args =
+        ModalRoute.of(context)?.settings.arguments as CardHome;
     return Scaffold(
-      appBar: AppBar(title: const Text('StreamBuilder')),
+      appBar: customAppBar(args, context),
       body: Center(
           child: StreamBuilder(
         stream: contador(),
